@@ -1,0 +1,256 @@
+:root {
+    --dark-back: #19283f;
+    --color-green: #33d1cc;
+    --slide-color: #33d1ccc2;
+    --color-yellow: #ffc400;
+    --color-red: #ff3150;
+    --section-color: #eff7fa;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.main-hedears::after {
+    content: "";
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: var(--color-green);
+    bottom: 40px;
+    left: 50%;
+    transform: translateX( -50%);
+}
+/* start navbar */
+.navbar {
+    background-color: var(--dark-back);
+}
+.navbar .nav-item .nav-link {
+    color: white;
+    font-weight: 500;
+}
+.search {
+    color: white;
+    border-left: 1px solid var(--color-green);
+    padding-left: 15px;
+}
+.nav-item .nav-link:hover, .nav-item .nav-link.active, .search svg {
+    color: var(--color-green);
+}
+
+.btn {
+    background-color: var(--color-red);
+    color: var(--color-yellow);
+    border: none;
+}
+.navbar .btn-lg {
+    font-size: 1.05rem !important;
+}
+.navbar .navbar-toggler {
+    border: 1px solid white !important;
+    box-shadow: none !important;
+    font-size: 25px !important;
+}
+.navbar .navbar-toggler:hover {
+    border: 1px solid var(--color-green) !important;
+}
+.navbar button svg {
+    color: white !important;
+}
+/* end navbar */
+/* start Landing */
+.landing {
+    height: calc( 100vh - 70px );
+    background-color: var(--dark-back);
+}
+/* end Landing */
+/* start Feuters */
+.feats .icons {
+height: 200px;
+}
+.feats .icons .numbers {
+    color: var(--section-color);
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    font-size: 190px !important;
+}
+.feats .icons .icon {
+    color: var(--color-green);
+    left: 50%;
+    bottom: 5px;
+    transform: translateX(-50%);
+}
+.feats h4 {
+    color: var(--color-yellow);
+}
+/* end Feuters */
+/* start Portfolio */
+.portfolio {
+    background-color: var(--section-color);
+}
+.portfolio ul {
+    flex-direction: row !important;
+    justify-content: center !important;
+}
+.portfolio ul li {
+    width: 50px !important;
+    height: 30px !important;
+    line-height: 0.4;
+}
+.portfolio ul li:not(.btn) {
+    line-height: 1;
+}
+.portfolio ul li:not(.btn):hover a {
+    color: var(--color-red) !important;
+}
+.portfolio ul li a:not(.active) {
+    color: black !important;
+}
+.portfolio ul li a {
+color: var(--color-yellow) !important;
+font-weight: 500 !important;
+}
+.portfolio ul li:hover a {
+    color: white !important;
+} 
+.portfolio .row {
+    margin-left: 0 !important;
+}
+.portfolio .shuffle .images::before {
+    content: "Application";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--slide-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.3s linear;
+    transform: translateX(-100%);
+}
+.portfolio .shuffle .box:hover .images::before {
+    transform: translateX(0);
+}
+.portfolio .shuffle img {
+    max-width: 100%;
+}
+/* end Portfolio */
+/* start stuff */
+.stuff .text p {
+    max-width: 500px;
+}
+.stuff img {
+    max-width: 100%;
+}
+/* end stuff */
+/* start team */
+.team {
+    background-color: var(--section-color);
+}
+.team h1 {
+    color: var(--color-yellow);
+}
+.team p {
+    max-width: 1300px;
+}
+.team .images img {
+    max-width: 100%;
+}
+.team .images {
+    overflow: hidden;
+}
+.team .images .slide {
+    background-color: var(--slide-color);
+    max-width: calc(100% - 24px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: 0.3s linear;
+    transform: translateY(-200%);
+    color: white;
+}
+.team .images:hover .slide {
+    animation-name: slid;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+@keyframes slid {
+    0% {transform: translateY(-200%);}
+    25% {transform: translateY(-100%);}
+    50% {transform: translateY(-110%);}
+    75% {transform: translateY(-100%);}
+    100% {transform: translateY(-200%);}
+}
+/* end team */
+/* start project */
+.project {
+    background-color: var(--dark-back);
+}
+/* end project */
+/* start blog */
+.blog img {
+    max-width: 100%;
+}
+/* end blog */
+/* start sub */
+.sub {
+    background-color: var(--color-yellow);
+}
+.sub h5 {
+    line-height: 2;
+    font-size: 18px;
+}
+.sub input {
+    background-color: transparent;
+}
+.sub input:focus {
+    outline: none;
+}
+.sub ::placeholder {
+    color: white;
+}
+.sub .btn-1 {
+    max-width: 100px;
+}
+.sub .btn-1:hover {
+    background-color: var(--dark-back);
+    color: white;
+}
+/* end sub */
+/* start footer */
+.footer {
+    background-color: var(--dark-back);
+}
+.footer h5 {
+    color: white;
+}
+.footer h4 {
+    font-size: 1rem;
+}
+.footer .s-1 {
+    color: var(--color-green);
+}
+.footer .s-2 {
+    color: var(--color-yellow);
+}
+.footer .mail {
+    width: 100%;
+}
+.facebook {
+    color: #1877f2;
+}
+.twiter {
+    color: #1da1f2;
+}
+.linked {
+    color: #0077b5;
+}
+.tube {
+    color: #ff0000;
+}
+/* end footer */
